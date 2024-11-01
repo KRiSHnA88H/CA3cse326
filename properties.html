@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties of Electromagnetic Waves</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+            margin: 15px auto;
+            max-width: 1200px;
+        }
+
+        nav a {
+            color: #333;
+            margin: 0 15px;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .property {
+            margin-bottom: 20px;
+        }
+
+        .property h3 {
+            margin-top: 10px;
+            color: #007BFF;
+        }
+
+        .property ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .property li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Properties of Electromagnetic Waves</h1>
+    <p>Understanding the fundamental characteristics of electromagnetic waves</p>
+</header>
+
+<nav>
+    <a href="#speed">Speed</a>
+    <a href="#wavelength">Wavelength</a>
+    <a href="#frequency">Frequency</a>
+    <a href="#energy">Energy</a>
+    <a href="#polarization">Polarization</a>
+    <a href="#reflection">Reflection and Refraction</a>
+</nav>
+
+<main>
+    <section id="speed">
+        <div class="property">
+            <h2>1. Speed</h2>
+            <p>Electromagnetic waves travel at the speed of light in a vacuum, approximately <strong>299,792 kilometers per second (km/s)</strong>. In different media, their speed can vary based on the medium's properties.</p>
+        </div>
+    </section>
+
+    <section id="wavelength">
+        <div class="property">
+            <h2>2. Wavelength</h2>
+            <p>The wavelength is the distance between consecutive peaks (or troughs) of a wave. It is inversely related to frequency:</p>
+            <ul>
+                <li><strong>Formula:</strong> \( \lambda = \frac{c}{f} \)</li>
+                <li>Where \( \lambda \) is the wavelength, \( c \) is the speed of light, and \( f \) is the frequency.</li>
+            </ul>
+            <img src="wavelength.png" alt="" style="width: 60vh;">
+        </div>
+    </section>
+
+    <section id="frequency">
+        <div class="property">
+            <h2>3. Frequency</h2>
+            <p>Frequency is the number of wave cycles that pass a point in one second, measured in Hertz (Hz). Higher frequencies correspond to shorter wavelengths and higher energy:</p>
+            <ul>
+                <li>Radio waves: Low frequency</li>
+                <li>Gamma rays: High frequency</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="energy">
+        <div class="property">
+            <h2>4. Energy</h2>
+            <p>The energy of electromagnetic waves is directly proportional to their frequency:</p>
+            <ul>
+                <li><strong>Formula:</strong> \( E = hf \)</li>
+                <li>Where \( E \) is energy, \( h \) is Planck's constant, and \( f \) is frequency.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="polarization">
+        <div class="property">
+            <h2>5. Polarization</h2>
+            <p>Polarization refers to the orientation of the electric field of the wave. Electromagnetic waves can be:</p>
+            <ul>
+                <li>Linearly polarized</li>
+                <li>Circularly polarized</li>
+                <li>Elliptically polarized</li>
+            </ul>
+            <p>Polarization affects how waves interact with materials, such as sunglasses that block certain polarized light.</p>
+            <img src="polar.webp" alt="" style="width: 60vh;">
+        </div>
+    </section>
+
+    <section id="reflection">
+        <div class="property">
+            <h2>6. Reflection and Refraction</h2>
+            <p>Electromagnetic waves can reflect off surfaces and refract when passing through different media. Key principles include:</p>
+            <ul>
+                <li>Law of Reflection: Angle of incidence equals angle of reflection.</li>
+                <li>Snell's Law: Describes how light bends when entering a different medium.</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Properties of Electromagnetic Waves. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

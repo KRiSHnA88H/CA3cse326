@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theory of Electromagnetic Waves</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            background-image: url(—Pngtree—cute\ hand\ drawn\ style\ mathematics_1176715.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            
+        }
+
+        header {
+            background-color:#f9b282;
+            color: #fff;
+            padding: 1.5rem;
+            text-align: center;
+           
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+            margin: 15px auto;
+            max-width: 800px;
+            
+        }
+
+        nav a {
+            color: #333;
+            margin: 0 15px;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            background-color: #f9b282;
+            color: #fff;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            max-width: 700px;
+            border-collapse: collapse;
+            margin: 20px 0;
+            margin-left: 50vh;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #333;
+            text-align: left;
+            color: #333;
+            background-color: bisque;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+        section p{
+            padding: 10px;
+        }
+       
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Theory of Electromagnetic Waves</h1>
+    <p>An exploration of the fundamental principles and applications of electromagnetic waves</p>
+</header>
+
+<nav>
+    <a href="em1home.html">Home</a>
+    <a href="history.html">History</a>
+    <a href="theory.html">Theory</a>
+    <a href="types.html">Types</a>
+    <a href="properties.html">Properties</a>
+    <a href="applications.html">Applications</a>
+    <a href="future.html">Future</a>
+    
+    
+</nav>
+
+<main>
+    <section id="intro">
+        <h2> Introduction</h2>
+        <p>The theory of electromagnetic waves explains how electric and magnetic fields interact to form waves that propagate through space. Originating from James Clerk Maxwell's equations, this theory laid the foundation for modern physics and paved the way for technologies like radio, television, and wireless communications.</p>
+    </section>
+
+    <section id="maxwell">
+        <h2>Maxwell's Equations</h2>
+
+<h3>1. Gauss's Law for Electricity</h3>
+<p class="equation">Mathematical Form: \(\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}\)</p> 
+<p>
+    Gauss's Law for Electricity states that the electric flux through any closed surface is directly proportional to the total electric charge enclosed within that surface. In other words, this law describes how electric charges are the sources of electric fields. The law’s mathematical form indicates that the divergence of the electric field \( \mathbf{E} \) at any point is equal to the charge density \( \rho \) at that point divided by the permittivity of free space \( \varepsilon_0 \). This principle forms the basis for understanding electric fields created by static charges.
+</p>
+
+<h3>2. Gauss's Law for Magnetism</h3>
+<p class="equation">Mathematical Form: \(\nabla \cdot \mathbf{B} = 0\)</p>
+<p>
+    Gauss's Law for Magnetism states that the magnetic flux through a closed surface is always zero. This implies that magnetic field lines form closed loops and do not have a beginning or an end, indicating the non-existence of isolated magnetic monopoles (individual magnetic north or south poles). The equation shows that the divergence of the magnetic field \( \mathbf{B} \) is zero, reflecting the fact that for every field line that enters a region, there is a corresponding line exiting it, resulting in a net flux of zero.
+</p>
+
+<h3>3. Faraday's Law of Induction</h3>
+<p class="equation">Mathematical Form: \(\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}\)</p>
+<p>
+    Faraday's Law describes how a changing magnetic field can induce an electric field. This relationship is foundational for the operation of electric generators and transformers. The mathematical form of Faraday’s Law states that the curl of the electric field \( \mathbf{E} \) is equal to the negative rate of change of the magnetic field \( \mathbf{B} \) with respect to time. Essentially, a time-varying magnetic field generates a circulating electric field, producing an electromotive force (EMF) in nearby conductors.
+</p>
+
+<h3>4. Ampère's Law (with Maxwell's Correction)</h3>
+<p class="equation">Mathematical Form: \(\nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}\)</p>
+<p>
+    Ampère’s Law originally described how electric currents create magnetic fields, stating that the curl of the magnetic field \( \mathbf{B} \) around a current-carrying conductor is proportional to the current \( \mathbf{J} \) passing through it. Maxwell modified this law by adding a term for the displacement current, \( \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \), to account for cases where electric fields change with time. This extended version of Ampère's Law is crucial to understanding electromagnetic wave propagation, as it links changing electric fields to magnetic fields, showing how electric and magnetic fields interact in dynamic systems.
+</p>
+    </section>
+
+   
+
+</main>
+<summary>
+  
+
+<table>
+    <thead>
+        <tr>
+            <th>Equation Name</th>
+            <th>Differential Form</th>
+            <th>Integral Form</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Gauss's Law for Electricity</td>
+            <td>\(\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}\)</td>
+            <td>\(\oint_{S} \mathbf{E} \cdot d\mathbf{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}\)</td>
+        </tr>
+        <tr>
+            <td>Gauss's Law for Magnetism</td>
+            <td>\(\nabla \cdot \mathbf{B} = 0\)</td>
+            <td>\(\oint_{S} \mathbf{B} \cdot d\mathbf{A} = 0\)</td>
+        </tr>
+        <tr>
+            <td>Faraday's Law of Induction</td>
+            <td>\(\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}\)</td>
+            <td>\(\oint_{C} \mathbf{E} \cdot d\mathbf{l} = -\frac{d}{dt} \int_{S} \mathbf{B} \cdot d\mathbf{A}\)</td>
+        </tr>
+        <tr>
+            <td>Ampère's Law (with Maxwell's Correction)</td>
+            <td>\(\nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}\)</td>
+            <td>\(\oint_{C} \mathbf{B} \cdot d\mathbf{l} = \mu_0 I_{\text{enc}} + \mu_0 \varepsilon_0 \frac{d}{dt} \int_{S} \mathbf{E} \cdot d\mathbf{A}\)</td>
+        </tr>
+    </tbody>
+</table>
+
+    
+</summary>
+<footer>
+    <p>&copy; 2024 Theory of Electromagnetic Waves. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
