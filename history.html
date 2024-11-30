@@ -107,6 +107,77 @@
             color: white;
         }
        
+        #simulation-container {
+            position: relative;
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            margin: 20px;
+        }
+        .compass {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .label {
+            position: absolute;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .label.north {
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .label.south {
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .label.east {
+            top: 50%;
+            right: 5px;
+            transform: translateY(-50%);
+        }
+        .label.west {
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+        }
+        .needle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 50%;
+            left: 50%;
+            transform-origin: center center;
+            transform: rotate(0deg);
+            transition: transform 0.3s ease-in-out;
+        }
+        .needle .red {
+            position: absolute;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 50px solid red;
+            transform: translate(-50%,-100%);
+        }
+        .needle .blue {
+            position: absolute;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 50px solid blue;
+            transform: translate(-50%,100%);
+            top: -50px; /* Align to share base with red */
+        }
+        #slider-container {
+            margin-top: 20px;
+        }
+        #current-value {
+            font-size: 18px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -135,7 +206,41 @@
         <img src="col.png" alt="" style="height: 40vh; margin-left: 50vh;">
         <figcaption style="margin-left: 50vh;">Charles-Augustin de Coulomb</figcaption>
         <h1>Orsted Experiment Simulation:</h1>
-        <div style="height: 40vh;">
+        <div>
+            <div id="simulation-container"></div>
+            <div class="compass">
+                <div class="needle" id="needle">
+                    <div class="red"></div>
+                    <div class="blue"></div>
+                </div>
+                <!-- Compass labels -->
+                <div class="label north">N</div>
+                <div class="label south">S</div>
+                <div class="label east">E</div>
+                <div class="label west">W</div>
+            </div>
+        </div>
+    
+        <div id="slider-container">
+            <label for="current-slider">Current: </label>
+            <input type="range" id="current-slider" min="0" max="100" value="0">
+            <div id="current-value">Current: 0 A</div>
+        </div>
+    
+        <script>
+            // Elements
+            const needle = document.getElementById('needle');
+            const slider = document.getElementById('current-slider');
+            const currentValueDisplay = document.getElementById('current-value');
+    
+            // Update needle rotation based on current
+            slider.addEventListener('input', () => {
+                const current = slider.value; // Get the slider value
+                const deflection = current * 0.9; // Deflection proportional to current
+                needle.style.transform = `rotate(${deflection}deg)`; // Update needle rotation
+                currentValueDisplay.textContent = `Current: ${current} A`; // Update current display
+            });
+        </script>
 
         </div>
     </section>
