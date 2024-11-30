@@ -106,7 +106,7 @@
             background-color: #615d5d;
             color: white;
         }
-       
+        
         #simulation-container {
             position: relative;
             display: inline-block;
@@ -206,7 +206,9 @@
         <img src="col.png" alt="" style="height: 40vh; margin-left: 50vh;">
         <figcaption style="margin-left: 50vh;">Charles-Augustin de Coulomb</figcaption>
         <h1>Orsted Experiment Simulation:</h1>
-       
+        <div>
+            <p>Use the slider to control the current through the wire and observe the deflection of the compass needle.</p>
+
     <div id="simulation-container">
         <div class="compass">
             <div class="needle" id="needle">
@@ -241,28 +243,6 @@
             currentValueDisplay.textContent = `Current: ${current} A`; // Update current display
         });
     </script>
-    
-        <div id="slider-container">
-            <label for="current-slider">Current: </label>
-            <input type="range" id="current-slider" min="0" max="100" value="0">
-            <div id="current-value">Current: 0 A</div>
-        </div>
-    
-        <script>
-            // Elements
-            const needle = document.getElementById('needle');
-            const slider = document.getElementById('current-slider');
-            const currentValueDisplay = document.getElementById('current-value');
-    
-            // Update needle rotation based on current
-            slider.addEventListener('input', () => {
-                const current = slider.value; // Get the slider value
-                const deflection = current * 0.9; // Deflection proportional to current
-                needle.style.transform = `rotate(${deflection}deg)`; // Update needle rotation
-                currentValueDisplay.textContent = `Current: ${current} A`; // Update current display
-            });
-        </script>
-
         </div>
     </section>
 
